@@ -1,0 +1,31 @@
+[ENABLE]
+alloc(FMA,128)
+label(return_true)
+
+FMA:
+cmp [esp],00B8CE17 // E8 ? ? ? ? 83 ? ? 85 C0 75 ? 8D ? ? ? C7 ? ? ? ? ? ? ? E8 ? ? ? ? 33 [First Result] (Address Below)
+jg return_true
+mov edx,[esp+08]
+mov eax,[edx+0C]
+jmp 0058D270+7
+
+return_true:
+mov eax,00000001
+ret
+
+0058D270: // Follow Call
+jmp FMA
+db 90 90
+
+018B96E1: // Remove the damage when you level-up
+db EB
+
+[DISABLE]
+0058D270:
+mov edx,[esp+08]
+mov eax,[edx+0C]
+
+018B96E1: // 89 9E ? ? ? ? 8B 0D ? ? ? ? 3B CB 74 ? 53 (je below)
+db 74
+
+dealloc(FMA)
