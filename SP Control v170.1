@@ -1,0 +1,15 @@
+[Enable]
+Alloc(SPControl,128)
+Label(Return)
+SPControl:
+mov [esp+8],#0 //X Coord
+mov [esp+C],#0 //Y Coord
+Return:
+//6A FF 68 ? ? ? ? 64 A1 ? ? ? ? 50 81 ? ? ? ? ? 53 55 56 57 A1 ? ? ? ? 33 ? 50 8D ? 24 ? ? ? ? 64 ? ? ? ? ? 8B ? 8B ? 24 ? ? ? ? 8B ? 24 ? ? ? ? 8B
+jmp 017ae610
+01E5BEA0: //4byte Scan address in Return [5th Result]
+dd SPControl
+[Disable]
+01E5BEA0: //Same as above
+dd 017ae610 //Address in Return
+DeAlloc(SPControl)
