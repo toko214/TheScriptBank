@@ -1,0 +1,7 @@
+[ENABLE]
+017AB90B:
+db D8 D9
+
+[DISABLE]
+017AB90B: // D9 C9 DC ? ? ? DC [Second Result]
+db D9 C9
