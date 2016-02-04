@@ -1,0 +1,13 @@
+[ENABLE]
+0187B493:
+db 90 E9
+
+018E1B4E:
+db 90 E9
+
+[DISABLE]
+0187B493: // 0F 85 ? ? ? ? 8B ? ? ? 8B ? ? 8B ? C1
+db 0F 85
+
+018E1B4E: // 0F 85 ? ? ? ? 83 ? ? 0F 84 ? ? ? ? 85 [Second Result]
+db 0F 85
