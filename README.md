@@ -33,6 +33,11 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - Slide and Attack
 - Unlimited Attack
 - View Swears
+- Mob Aggro
+- CPU Hack
+- No Crusader Codex
+- Faster Mobs
+- No Char KB
 
 ------
 
