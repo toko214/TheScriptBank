@@ -16,14 +16,19 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 
 ------
 
+### Current Version
+**170.2**
+
 ### Current Updated Scripts
 - 58 Second Godmode
 - Full Godmode
 - Full Map Attack (some skills)
 - Mob Disarm
 - No Delay Flash Jump
+- No Magnus Balls
 - Random HWID
 - Skill Injection + GND
+- Slide and Attack
 - Unlimited Attack
 - View Swearwords
 
