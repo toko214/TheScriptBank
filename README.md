@@ -39,6 +39,13 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - Faster Mobs
 - No Char KB
 - Mob Freeze
+- Air Loot
+- Crazy Mobs
+- Jump Down Anywhere
+- Face Left
+- Air Check & Attack on Rope
+- Mob Suck Left
+- Mob Suck Right
 
 ------
 
