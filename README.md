@@ -46,6 +46,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - Air Check & Attack on Rope
 - Mob Suck Left
 - Mob Suck Right
+- Item Filter
 
 ------
 
