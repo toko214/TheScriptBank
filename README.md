@@ -29,6 +29,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - No Magnus Balls
 - Random HWID
 - Skill Injection + GND
+- Skip Air Check
 - Slide and Attack
 - Unlimited Attack
 - View Swears
