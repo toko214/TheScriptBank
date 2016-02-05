@@ -23,6 +23,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - 58 Second Godmode
 - Full Godmode
 - Full Map Attack (some skills)
+- Logo Skipper
 - Mob Disarm
 - No Delay Flash Jump
 - No Magnus Balls
@@ -30,7 +31,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - Skill Injection + GND
 - Slide and Attack
 - Unlimited Attack
-- View Swearwords
+- View Swears
 
 ------
 
