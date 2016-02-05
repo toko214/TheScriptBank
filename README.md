@@ -1,9 +1,11 @@
 
 ![The Script Bank - GameKiller](https://i.imgur.com/eAYBzBw.png)
-A place where all scripts come to rest.
+
+###### A place where all scripts come to rest.
 
 Brought to you by:
-GameKiller - Bringing The Pain To Each And Every Game
+
+**GameKiller** - Bringing The Pain To Each And Every Game
 http://www.gamekiller.net/
 -----
 
