@@ -1,7 +1,0 @@
-[Enable]
-00BE1E16:
-db 90 90
-
-[Disable]
-00BE1E16:
-db 75 98

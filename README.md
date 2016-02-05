@@ -21,3 +21,14 @@ For the main and current patch, please use the files that are in the Master Bran
 Folders are for files that will be moved into their designated folder once they are outdated.
 
 ------
+
+### Current Updated Scripts
+- 58 Second Godmode
+- Full Godmode
+- Full Map Attack (some skills)
+- Mob Disarm
+- No Delay Flash Jump
+- Random HWID
+- Skill Injection + GND
+- Unlimited Attack
+- View Swearwords
