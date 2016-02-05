@@ -38,6 +38,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - No Crusader Codex
 - Faster Mobs
 - No Char KB
+- Mob Freeze
 
 ------
 
