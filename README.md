@@ -1,5 +1,5 @@
 
-![The Script Bank - GameKiller](https://i.imgur.com/eAYBzBw.png)
+![The Script Bank - GameKiller](http://i.imgur.com/VpxSdwu.png)
 
 ###### A place where all scripts come to rest.
 
