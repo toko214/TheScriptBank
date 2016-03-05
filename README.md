@@ -50,6 +50,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 - Block Recv
 - Mob Filter
 - Auto Login
+- Auto Portal
 
 ------
 
