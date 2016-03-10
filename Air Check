@@ -1,0 +1,20 @@
+//Updated by CT
+[ENABLE]
+016860F9:
+db EB
+
+0168A306:
+db 90 E9
+
+016A41A4:
+db EB
+
+[DISABLE]
+016860F9: // 75 ? 8B 8D ? ? ? ? 8B ? 8B 8D [First Result]
+db 75
+
+0168A306: // 0F 85 ? ? ? ? 8B 8D ? ? ? ? E8 ? ? ? ? 85 C0 74
+db 0F 85
+
+016A41A4: // 74 ? 8B 8D ? ? ? ? E8 ? ? ? ? 85 C0 74 ? 81
+db 74
