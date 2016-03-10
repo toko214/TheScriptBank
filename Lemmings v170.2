@@ -1,0 +1,57 @@
+[Enable]
+Alloc(WalkingMobFallDown,256)
+Label(W1)
+Label(W2)
+Label(W3)
+
+WalkingMobFallDown:
+fcompp
+lea edi,[esi+00000140]
+fnstsw ax
+test ah,05
+jp W1
+mov edx,[esi+00000148]
+push edx
+push edi
+call 004B3E30
+lea ecx,[eax+10]
+mov eax,[ecx]
+mov edx,[eax+38]
+add esp,08
+call edx
+jmp W2
+
+W1:
+mov eax,[esi+00000148]
+push eax
+push edi
+call 004B3E30
+mov edx,[eax+10]
+lea ecx,[eax+10]
+mov eax,[edx+3C]
+add esp,08
+call eax
+
+W2:
+test eax,eax
+je W3
+mov edx,[eax+10]
+add eax,10
+mov ecx,eax
+mov eax,[edx+1C]
+call eax
+fcomp qword ptr [01D1CEE8]
+fnstsw ax
+test ah,41
+jnp 17C2360
+
+W3:
+jmp 17C2364
+
+17C19DD:
+je WalkingMobFallDown
+
+[Disable]
+DeAlloc(WalkingMobFallDown)
+17C19DD:
+je 017C2222
