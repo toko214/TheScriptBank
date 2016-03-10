@@ -1,0 +1,8 @@
+//Updated by CT
+[ENABLE]
+017B18FB:
+db D8 D9
+
+[DISABLE]
+017B18FB: // D9 C9 DC ? ? ? DC [Second Result]
+db D9 C9
