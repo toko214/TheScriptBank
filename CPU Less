@@ -1,15 +1,15 @@
 //Updated by CT
 [ENABLE]
-00AF4BDC: // CWvsPhysicalSpace2D::Load
+00AF523C: // CWvsPhysicalSpace2D::Load
 db 90 90 90 90 90
 
-00AF4BE5: // CMapLoadable::RestoreTile
+00AF5245: // CMapLoadable::RestoreTile
 db 90 90 90 90 90
 
-00AF4BEE: // CMapLoadable::RestoreBack
+00AF524E: // CMapLoadable::RestoreBack
 db 90 90 90 90 90
 
-00AF4BF5: // CMapLoadable::RestoreWeather
+00AF5255: // CMapLoadable::RestoreWeather
 db 90 90 90 90 90
 
 00B7FB10: // No mob reaction, hitmarks or damage
