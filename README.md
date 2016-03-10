@@ -17,40 +17,10 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 ------
 
 ### Current Version
-**170.2**
+**171.0**
 
 ### Current Updated Scripts
-- 58 Second Godmode
-- Full Godmode
-- Full Map Attack (some skills)
-- Logo Skipper
-- Mob Disarm
-- No Delay Flash Jump
-- No Magnus Balls
-- Random HWID
-- Skill Injection + GND
-- Skip Air Check
-- Slide and Attack
-- Unlimited Attack
-- View Swears
-- Mob Aggro
-- CPU Hack
-- No Crusader Codex
-- Faster Mobs
-- No Char KB
-- Mob Freeze
-- Air Loot
-- Crazy Mobs
-- Jump Down Anywhere
-- Face Left
-- Air Check & Attack on Rope
-- Mob Suck Left
-- Mob Suck Right
-- Item Filter
-- Block Recv
-- Mob Filter
-- Auto Login
-- Auto Portal
+- None!
 
 ------
 
