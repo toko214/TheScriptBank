@@ -17,12 +17,18 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 ------
 
 ### Current Version
-**171.0**
+**171.1**
 
 ### Current Updated Scripts
 - None!
 
 ------
+
+
+### When Posting scripts:
+- Use full names. "No Delay", not "ND"
+- add version to the end "No Delay v171.1"
+- add an AoB wherever needed "12345678: //11 22 33 44"
 
 The current patch will have files held in the Master Branch.
 
