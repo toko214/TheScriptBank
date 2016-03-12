@@ -1,0 +1,97 @@
+//ripped from ebolaze by melonisme
+[ENABLE]
+alloc(GetItemXY,128)
+label(Ending)
+
+alloc(PetItemLoot,128)
+label(PetTeleport)
+label(NextTeleport)
+label(Check)
+label(ReturnXor)
+label(ReturnPop)
+
+PetItemLoot:
+lea eax,[esp+58]
+push eax
+call PetTeleport
+jmp 017CC0F5 // mov ecx,[eax+04] below hook address
+
+PetTeleport:
+push ebp
+mov ebp,esp
+sub esp,04
+push esi
+push edi
+mov esi,[020C4DB0]
+test esi,esi
+je ReturnXor
+mov eax,[esi+2C]
+test eax,eax
+je ReturnPop
+mov [ebp-04],eax
+lea eax,[ebp-04]
+push eax
+call 00478C50
+mov esi,[eax+04]
+add esp,04
+cmp dword ptr [esi+48],00
+je Check
+cmp dword ptr [esi+3C],00
+je Check
+cmp byte ptr [esi+000000A8],00
+je Check
+
+NextTeleport:
+lea ecx,[esi+00000088]
+mov edi,ecx
+call 004BDC30
+mov edx,[ebp+08]
+mov [edx+04],eax
+mov ecx,edi
+lea ecx,[ecx+0C]
+call 004BDC30
+mov edx,[ebp+08]
+mov [edx],eax
+mov eax,[ebp+08]
+jmp ReturnPop
+
+Check:
+cmp dword ptr [ebp-04],00
+jne NextTeleport
+
+ReturnXor:
+xor eax,eax
+
+ReturnPop:
+pop edi
+pop esi
+mov esp,ebp
+pop ebp
+ret 0004
+
+GetItemXY:
+lea eax,[esp+68]
+push eax
+call PetTeleport
+test eax,eax
+je Ending
+mov edx,[eax]
+mov [esp+40],edx
+jmp 017CC0A0
+
+Ending:
+jmp 017CB9FD
+
+017CB9F7:
+jmp GetItemXY
+db 90
+
+017CC0E7:
+jmp PetItemLoot
+
+[DISABLE]
+017CB9F7:
+db 0F 84 81 06 00 00
+
+017CC0E7:
+db 8B 16 8B 52 10
