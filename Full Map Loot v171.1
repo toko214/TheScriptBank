@@ -2,7 +2,7 @@
 [ENABLE]
 00733217: // Somewhere down CDropPool::TryPickUpDrop
 cmp [esi+48],0 // Follow jne 0073328F -> mov ecx,[esi+48]
-jz 007332AB // lea ecx,[esp+20]
+jz 00733228 // lea ecx,[esp+20]
 push ecx
 mov ecx,[esp+4C] // Follow jne 0073328F -> mov eax,[esp+4C]
 mov [ecx],ebp
@@ -11,7 +11,7 @@ pop ecx
 jmp 0073327F // Address in jne
 dw 9090
 
-018E26C0: // CWvsContext::SendBoobyTrapAlert
+018E88E0: // CWvsContext::SendBoobyTrapAlert
 ret 0004
 
 [DISABLE]
