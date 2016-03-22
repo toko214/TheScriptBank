@@ -1,5 +1,7 @@
 //Updated by ClanTag
 //Shoutout to 10101110 of GK for the major help.
+//   Star ( * ) denotes addresses OR offsets that should be updated.
+
 [Enable]
 Alloc(WalkingMobFallDown,256)
 Label(W1)
@@ -8,11 +10,11 @@ Label(W3)
 
 WalkingMobFallDown:// Right click, follow entryAddy.
 fcompp
-lea edi,[esi+00000140]// Goes up by 10?
+lea edi,[esi+00000140]// *
 fnstsw ax
 test ah,05
 jp W1
-mov edx,[esi+00000148]// Always 8 more than above.
+mov edx,[esi+00000148]// *
 push edx
 push edi
 call 004B37F0 // *followcallAddy
@@ -24,7 +26,7 @@ call edx
 jmp W2
 
 W1:
-mov eax,[esi+00000148]
+mov eax,[esi+00000148]// *
 push eax
 push edi
 call 004B37F0 // *followcallAddy
@@ -37,7 +39,7 @@ call eax
 W2:
 test eax,eax
 je W3
-mov edx,[eax+10]
+mov edx,[eax+10]// *
 add eax,10
 mov ecx,eax
 mov eax,[edx+1C]
@@ -45,10 +47,10 @@ call eax
 fcomp qword ptr [01D23678] //worstAddy //DC 1D ?? ?? ?? ?? DF E0 F6 C4 ?? 0F 8A ?? ?? ?? ?? D9 EE DC 5c ?? ?? DF EO DD 05 ?? ?? ?? ?? F6 C4 ?? 7A ?? 8B 8E
 fnstsw ax
 test ah,41
-jnp 017C7EC0 //*jnpAddy //F6 ?? ?? 0F 8B ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 83 ?? ?? 0F 84 ?? ?? ?? ?? 83 F8 ?? 0F 84 ?? ?? ?? ??
+jnp 017C7EC0 //*jnpAddy  1 line below AoB //DF E0 F6 ?? ?? 0F 8B ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 83 ?? ?? 0F 84 ?? ?? ?? ?? 83 F8 ?? 0F 84 ?? ?? ?? ??
 
 W3:
-jmp 017C7EC4 //*otherAddy
+jmp 017C7EC4 //*otherAddy // 3 lines below worstAddy
 
 017C753D:
 je WalkingMobFallDown
