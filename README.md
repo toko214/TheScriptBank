@@ -17,10 +17,10 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 ------
 
 ### Current Version
-**171.1**
+**171.2**
 
 ### Current Updated Scripts
-- None!
+- A Whole Bunch!
 
 ------
 
