@@ -1,0 +1,14 @@
+// Updated by CT
+[ENABLE]
+00DD1610: // CStage::FadeOut
+ret 0004
+
+00DD1050: // CStage::FadeIn
+ret 0004
+
+[DISABLE]
+00DD1610: // 33 C9 6A 00 E8 ? ? ? ? 8B 35 [Call]
+db 6A FF 68
+
+00DD1050: // 33 C9 6A 00 E8 ? ? ? ? 8B 44 [Call]
+db 6A FF 68
