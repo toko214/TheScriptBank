@@ -1,4 +1,3 @@
-
 ![The Script Bank - GameKiller](http://i.imgur.com/VpxSdwu.png)
 
 ###### A place where all scripts come to rest.
@@ -17,7 +16,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 ------
 
 ### Current Version
-**171.2**
+**171.3**
 
 ### Current Updated Scripts
 - A Whole Bunch!
@@ -27,7 +26,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 
 ### When Posting scripts:
 - Use full names. "No Delay", not "ND"
-- add version to the end "No Delay v171.1"
+- add version in the top line with this format (important for ct builder)(without quotes) "//171.3"
 - add an AoB wherever needed "12345678: //11 22 33 44"
 
 The current patch will have files held in the Master Branch.

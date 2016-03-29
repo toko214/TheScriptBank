@@ -1,0 +1,48 @@
+//171.3
+//Updated by CT
+[ENABLE]
+alloc(BlockRecvHook,256)
+label(RecvCheckLoop)
+label(BlockRecv)
+label(End)
+
+alloc(RecvList,512)
+
+//Hook address: 008078D0
+//8B ? 24 ? 3D ? ? ? ? 0F 8F ? ? ? ? 0F 84 ? ? ? ? 8D
+
+BlockRecvHook:
+mov eax,[esp+04] //Original Opcode @ Hook address
+and eax,0FFFF
+push edx
+mov edx,RecvList
+
+RecvCheckLoop:
+cmp eax,[edx]
+je BlockRecv
+cmp [edx],00
+je End
+add edx,04
+jmp RecvCheckLoop
+
+BlockRecv:
+xor eax,eax
+
+End:
+pop edx
+cmp eax,000003E4 //Opcode below Hook address
+jmp 008079A9 //Address of jg
+
+RecvList:
+dd 01D4 //Block Pierre's Hat/Vellum Rocks
+dd 00 //This signifies the end of the list DO NOT REMOVE; add headers above it
+
+01D3E654: //4 Bytes scan Hook address [1st Result]
+dd BlockRecvHook
+
+[DISABLE]
+01D3E654: //Same as above
+dd 008079A0 //Hook address
+
+dealloc(BlockRecv)
+dealloc(RecvList)
