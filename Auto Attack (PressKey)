@@ -9,6 +9,15 @@ Alloc(PressKey,128)
 
 
 define(CTRL,001D0000)
+define(SHIFT,002A0000)
+define(INSERT,01520000)
+define(DEL,01530000)
+define(HOME,01470000)
+define(END,014F0000)
+define(PAGEUP,01490000)
+define(PAGEDOWN,01510000)
+define(ALT,00380000)
+define(Z,002C0000)
 
 
 StatHook:
