@@ -1,0 +1,97 @@
+//AutoPot by ClanTag
+//Credits - ShivvTek for updating PressKey + whoever created PressKey.
+[ENABLE]
+Alloc(GiveHealth,256)
+Label(HealthEnd)
+Alloc(HealthVar,4)
+RegisterSymbol(HealthVar)
+Alloc(GiveMana,256)
+Label(ManaEnd)
+Alloc(ManaVar,4)
+RegisterSymbol(ManaVar)
+Alloc(PressKey,256)
+
+define(CTRL,001D0000)
+define(SHIFT,002A0000)
+define(INSERT,01520000)
+define(DEL,01530000)
+define(HOME,01470000)
+define(END,014F0000)
+define(PAGEUP,01490000)
+define(PAGEDOWN,01510000)
+define(ALT,00380000)
+define(Z,002C0000)
+
+
+
+GiveHealth:
+pushad
+mov [esi+00002AB4],edi
+mov [HealthVar],edi
+test edi,edi
+je HealthEnd
+mov ecx,[020C5608]
+test ecx,ecx
+je HealthEnd
+mov [ecx+58],#20
+cmp [HealthVar],#5500 //Change Health Potting Value
+jge HealthEnd
+mov edx, PAGEUP //Change Health Key
+call PressKey
+
+HealthEnd:
+popad
+jmp 01434ED3
+
+
+GiveMana:
+pushad
+mov [esi+00002AB8],edi
+mov [ManaVar],edi
+test edi,edi
+je ManaEnd
+mov eax,[020C5608]
+test eax,eax
+je ManaEnd
+mov [eax+5c],#20
+cmp [ManaVar],#1500 //Change Mana Potting Value
+jge ManaEnd
+mov edx, PAGEDOWN //Change Mana Key
+call PressKey
+
+ManaEnd:
+popad
+jmp 01434F3A
+
+
+PressKey:
+mov esi,[004B4320] //A1 ? ? ? ? 8B ? ? ? ? ? 85 ? 74 ? 8B ? ? 51 83 ? ? 50 E8 ? ? ? ? 98 83 ? ? 3D ? ? ? ? 74 ? 3D ? ? ? ? 74 [in MOV]
+mov ecx,[esi+A4]
+push edx
+push 00
+call 017F3640 //A1 ?? ?? ?? ?? 85 C0 74 ?? 8D 48 ?? 8B 01 8B 00
+ret
+
+01434EAF:
+jmp GiveHealth
+nop
+
+01434F16:
+jmp GiveMana
+nop
+
+[DISABLE]
+
+01434EAF:
+mov [esi+00002AB4],edi
+
+01434F16:
+mov [esi+00002AB8],eax
+
+DeAlloc(GiveHealth)
+DeAlloc(HealthVar)
+UnRegisterSymbol(HealthVar)
+DeAlloc(GiveMana
+DeAlloc(ManaVar)
+UnRegisterSymbol(ManaVar)
+DeAlloc(PressKey)
