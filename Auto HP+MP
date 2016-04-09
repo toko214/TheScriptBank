@@ -86,7 +86,7 @@ nop
 mov [esi+00002AB4],edi
 
 01434F16:
-mov [esi+00002AB8],eax
+mov [esi+00002AB8],edi
 
 DeAlloc(GiveHealth)
 DeAlloc(HealthVar)
