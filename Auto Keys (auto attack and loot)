@@ -24,6 +24,8 @@ StatHook:
 pushad
 mov edx, CTRL //Change auto attack key here
 Call PressKey
+//mov edx, Z //uncomment for auto loot
+//Call PressKey
 popad
 jmp Ret
 
