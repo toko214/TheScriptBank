@@ -47,7 +47,7 @@ db 8A
  
 [Disable]
 016860BC:
-db 42
+db 8B
 016FE8B7:
 db 0F 84 DE 02 00 00
 016FE8C3:
