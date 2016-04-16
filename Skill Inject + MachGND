@@ -1,5 +1,5 @@
 //171.3
-// Updated by King Kunta Su w/ help from CT
+// Updated by King Kunta Su w/ help from CT and fixed by Noire
 [Enable]
 alloc(skill_id_hook,128)
 label(skill_id_return)
