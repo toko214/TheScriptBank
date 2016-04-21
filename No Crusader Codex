@@ -1,15 +1,17 @@
-//171.3
+//v172.1
 //Updated by CT
 [ENABLE]
-01881C63:
+018A7AF3:
 db 90 E9
 
-018E846E:
+0190ECFE:
 db 90 E9
 
 [DISABLE]
-01881C63: // 0F 85 ? ? ? ? 8B ? ? ? 8B ? ? 8B ? C1
+018A7AF3: // 0F 85 ? ? ? ? 8B ? ? ? 8B ? ? 8B ? C1
 db 0F 85
 
-018E846E: // 0F 85 ? ? ? ? 83 ? ? 0F 84 ? ? ? ? 85 [Second Result]
+0190ECFE: // 0F 85 ? ? ? ? 83 ? ? 0F 84 ? ? ? ? 85 [Second Result]
 db 0F 85
+
+

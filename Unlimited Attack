@@ -1,10 +1,11 @@
-//171.3
+//v172.1
 //Updated by CT
 [ENABLE]
-01622520:
+01640D70:
 db EB
 
 
 [DISABLE]
-01622520: // 8B 01 8B 54 24 ? 56 8B 74 24 ? 2B C6 [JNGE below]
+01640D70: // 8B 01 8B 54 24 ? 56 8B 74 24 ? 2B C6 [JNGE below]
 db 7E
+

@@ -1,4 +1,4 @@
-//171.3
+//v172.1
 //Updated by CT
 [ENABLE]
 alloc(ItemFilter,256)
@@ -70,12 +70,12 @@ mov ecx,ebx // Original Opcode
 mov [esi+48],eax // Original Opcode
 jmp Return
 
-0073C0D6:
+00745C09:
 jmp ItemFilter
 Return:
 
 [DISABLE]
-0073C0D6: // 8B ? 89 ? ? E8 ? ? ? ? 8B ? 89 ? ? E8 ? ? ? ? 0F ? ? 89 ? ? 8B ? E8 ? ? ? ? 0F
+00745C09: // 8B ? 89 ? ? E8 ? ? ? ? 8B ? 89 ? ? E8 ? ? ? ? 0F ? ? 89 ? ? 8B ? E8 ? ? ? ? 0F
 mov ecx,ebx
 mov [esi+48],eax
 
@@ -83,3 +83,4 @@ dealloc(ItemFilter)
 dealloc(ItemList)
 dealloc(Mesos)
 dealloc(Mode)
+
