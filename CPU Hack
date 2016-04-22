@@ -18,18 +18,17 @@ retn 60
 
 [DISABLE]
 00B00E8C: // FF 15 ? ? ? ? 8B CF E8 ? ? ? ? 6A 01
-call 00AE1A20
+call 00AED7C0
 
 00B00E95:
-call 00AF4730
+call 00B00340
 
 00B00E9E:
-call 00AEBB10
+call 00AF75E0
 
 00B00EA5:
-call 00ADF430
+call 00AEB210
 
 00B8DDF0: // FUNCTION START (push -01): 8B 80 ? ? ? ? 3B ? ? ? 75
 push -01
-push 01A42F88
-
+push 01A6F008
