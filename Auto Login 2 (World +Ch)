@@ -6,22 +6,22 @@ label(CLogin__OnRecommendWorldMessage_Hook_callback)
 
 CLogin__OnRecommendWorldMessage_Hook:
 mov [esp],CLogin__OnRecommendWorldMessage_Hook_callback
-jmp 0040D810 // CLogin__OnRecommendWorldMessage //original call
+jmp 00AB7C20 // CLogin__OnRecommendWorldMessage //original call
 
 CLogin__OnRecommendWorldMessage_Hook_callback:
-mov ecx,[020D2570] // CLogin__GetInstance: 8B 3D ? ? ? ? 33 DB 89 7C 24 18 3B FB 0F 84 ? ? ? ? 8B
+mov ecx,[0210A088] // CLogin__GetInstance: 8B 3D ? ? ? ? 33 DB 89 7C 24 18 3B FB 0F 84 ? ? ? ? 8B
 push 00 // NULL
 push 0A // Channel 11
 push 04 // World broa - change for other world
 // 6A FF 68 ? ? ? ? 64 A1 00 00 00 00 50 81 EC ? ? 00 00 A1 ? ? ? ? 33 ? 89 ? ? ? ? 00 00 53 55 56 57 A1 ? ? ? ? 33 ? 50 8D ? ? ? ? 00 00 64 ? ? ? ? ? 8B ? 89 ? ? ? E9
-call 00A5F1A0 // CLogin__SendLoginPacket: E8 ? ? ? ? 80 3D ? ? ? ? 00 0F [First Result & Follow Call]
-jmp 00AABB25+5//hook+5
+call 00A6B460 // CLogin__SendLoginPacket: E8 ? ? ? ? 80 3D ? ? ? ? 00 0F [First Result & Follow Call]
+jmp 00AB7DD3+5//hook+5
 
-00AABB25:
+00AB7DD3:
 call CLogin__OnRecommendWorldMessage_Hook
 
 [DISABLE]
-00AABB25: // 8D 87 ? ? ? ? 83 ? ? 0F ? ? ? ? ? FF [First call at function above]
-call 0040D810
+00AB7DD3: // 8D 87 ? ? ? ? 83 ? ? 0F ? ? ? ? ? FF [First call at function above]
+call 00AB7C20
 
 dealloc(CLogin__OnRecommendWorldMessage_Hook)
