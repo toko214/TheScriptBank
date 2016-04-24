@@ -8,21 +8,20 @@ Brought to you by:
 http://www.gamekiller.net/
 -----
 
-Script outdated/unfunctional?
-Have a script you are looking to add onto here?
+Script updated but non-functional?
+Have a script you are looking to add into The Bank?
 
 Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 
 ------
 
 ### Current Version
-**171.3**
+- **172.1**
 
 ### Current Updated Scripts
 - A Whole Bunch!
 
 ------
-
 
 ### When Posting scripts:
 - Use full names. "No Delay", not "ND"
