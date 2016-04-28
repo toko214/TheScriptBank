@@ -1,5 +1,4 @@
-//v172.1
-//Updated by CT
+//Updated by CT //Noire's FMA
 [enable]
 alloc(hook,128)
 label(return)
@@ -11,8 +10,8 @@ jmp hook
 return:
 
 hook:
-cmp [esp],00B9BC37
-jne return_true
+cmp [esp],00B6898E// 8B 9C 24 ?? 00 00 00 83 C4 0C 85 C0 75 0F 81 FB ?? ?? ?? ?? 75 7F 83 7C [First Result]
+jne return_true  //<- if this isn't je, you did it wrong
 mov edx,[esp+08]
 mov eax,[edx+0C]
 jmp return
@@ -21,19 +20,16 @@ return_true:
 mov eax,00000001
 ret
 
-
-018B3B16:
+018B3B58:
 db EB
-
-
-
 
 [disable]
 00594EC0:
 mov edx,[esp+08]
 mov eax,[edx+0C]
 
-018B3B16: //89 9E ?? ?? ?? ?? 8B 0D ?? ?? ?? ?? 3B CB 74 ? 53 [je below]
+//89 9E ?? ?? ?? ?? 8B 0D ?? ?? ?? ?? 3B CB 74 ?? ?? ?? ?? ?? ?? 53 [je below]
+018B3B58:
 db 74
 
 dealloc(hook)

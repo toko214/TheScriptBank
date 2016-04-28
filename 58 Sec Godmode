@@ -1,5 +1,3 @@
-//v172.2
-//Updated by CT
 [Enable]
 alloc(GodmodeHook,512)
 label(Exit)

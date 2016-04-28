@@ -1,4 +1,3 @@
-//v172.2
 //Updated by CT
 [ENABLE]
 00B00EDC: // CWvsPhysicalSpace2D::Load

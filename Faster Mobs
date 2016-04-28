@@ -1,10 +1,8 @@
-//v172.1
 //Updated by CT
 [Enable]
-00BF0D86: //75 ?? 33 DB 8D 97 ?? 00 00 00 B9 ?? 00 00 00 E8
+00BF0DD6: //75 ?? 33 DB 8D 97 ?? 00 00 00 B9 ?? 00 00 00 E8
 db 90 90
 
 [Disable]
-00BF0D86:
+00BF0DD6:
 db 75 98
-

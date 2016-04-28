@@ -1,9 +1,7 @@
-//171.3
-//Updated by toko214  
 [Enable]
-00E2A72A:
+00E3B9DA:
 db 00
 
 [Disable]
-00E2A72A: //01 00 00 00 D8 D1 DF E0
+00E3B9DA: //01 00 00 00 D8 D1 DF E0
 db 01

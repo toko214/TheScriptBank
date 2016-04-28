@@ -1,11 +1,10 @@
-//v172.1
-//Updated by CT
+// Updated by CT
 [Enable]
-00AC7C89: //74 19 2B F8 81 FF DC 05 00 00 0F 86 ?? ?? 00 00 5F 88 5E ?? C6 46 ?? 00 5E 5B C3
+00AC7CD9: //74 19 2B F8 81 FF DC 05 00 00 0F 86 ?? ?? 00 00 5F 88 5E ?? C6 46 ?? 00 5E 5B C3
 db 75
 
 
 [Disable]
-00AC7C89:
+00AC7CD9:
 db 74
 
