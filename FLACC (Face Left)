@@ -1,4 +1,4 @@
-//v172.1
+//v172.2
 //Updated by CT
 [Enable]
 0057AE1C: // 83 E1 01 83 C9 06
@@ -8,5 +8,4 @@ db B9 07 00 00 00 90
 [Disable]
 0057AE1C:
 db 83 E1 01 83 C9 06
-
 
