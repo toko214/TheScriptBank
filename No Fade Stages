@@ -1,4 +1,5 @@
-// Updated by CT
+//v172.2 
+//Updated by CT
 [ENABLE]
 00DE1250: // CStage::FadeOut
 ret 0004
