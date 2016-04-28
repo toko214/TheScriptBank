@@ -1,5 +1,5 @@
-//172.1
-//Updated by Qybae & Su
+//172.2
+//Su was here
 [ENABLE]
 alloc(find_hit_mob_in_rect_hook,128)
 alloc(try_doing_blazewiz_attack_hook,128)
@@ -12,7 +12,7 @@ dd 00000000
 
 try_doing_blazewiz_attack_hook:
 mov [set_mob_pos],00000001
-call 016E86F0 // Original Call
+call 016E8740 // Original Call
 mov [set_mob_pos],00000000
 jmp try_doing_blazewiz_attack_return
 
@@ -20,21 +20,21 @@ find_hit_mob_in_rect_hook:
 mov eax,[020FC888] // CWvsPhysicalSpace2D: A1 ? ? ? ? 8B 50 ? 83 C0
 lea eax,[eax+0C] // Left Wall Offset
 mov [esp+04],eax
-jmp 00B9C2B0 // Original call (CMobPool::FindHitMobInRect)
+jmp 00B9C300 // Original call (CMobPool::FindHitMobInRect)
 
-009234AE:
+009234F7:
 jmp try_doing_blazewiz_attack_hook
 try_doing_blazewiz_attack_return:
 
-009167D9:
+00916829:
 call find_hit_mob_in_rect_hook
 
 [DISABLE]
-009234AE: // 8B 0D ? ? ? ? ? E8 ? ? ? ? 8B 4E ? 8B [Third Result & Call below]
-call 016E86F0
+009234F7: // 8B 0D ? ? ? ? ? E8 ? ? ? ? 8B 4E ? 8B [Third Result & Call below]
+call 016E8740
 
-009167D9: // E8 ? ? ? ? 8B ? 89 ? ? ? 85 ? 0F 8E [First Result]
-call 00B9C2B0
+00916829: // E8 ? ? ? ? 8B ? 89 ? ? ? 85 ? 0F 8E [First Result]
+call 00B9C300
 
 unregistersymbol(set_mob_pos)
 dealloc(set_mob_pos)
