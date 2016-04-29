@@ -22,7 +22,7 @@ lea eax,[eax+0C] // Left Wall Offset
 mov [esp+04],eax
 jmp 00B9C300 // Original call (CMobPool::FindHitMobInRect)
 
-009234F7:
+009234FE:
 jmp try_doing_blazewiz_attack_hook
 try_doing_blazewiz_attack_return:
 
@@ -30,7 +30,7 @@ try_doing_blazewiz_attack_return:
 call find_hit_mob_in_rect_hook
 
 [DISABLE]
-009234F7: // 8B 0D ? ? ? ? ? E8 ? ? ? ? 8B 4E ? 8B [Third Result & Call below]
+009234FE: // 8B 0D ? ? ? ? ? E8 ? ? ? ? 8B 4E ? 8B [Third Result & Call below]
 call 016E8740
 
 00916829: // E8 ? ? ? ? 8B ? 89 ? ? ? 85 ? 0F 8E [First Result]
