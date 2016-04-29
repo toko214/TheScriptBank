@@ -1,5 +1,5 @@
-//171.3
-// Updated By Qybah
+//172.2
+//Updated By Leo
 [ENABLE]
 alloc(CUIAvatar__SelectCharacter_Hook,1024)
 alloc(StringPIC,40)
@@ -33,14 +33,14 @@ mov esp,ebp
 pop ebp
 ret 0004
 
-00A78D60:
+00A78DB0:
 jmp CUIAvatar__SelectCharacter_Hook
 db 90 90
 
 [DISABLE]
-00A78D60: // Follow Call Below: 8B 87 ? ? ? ? 8B 80 ? ? ? ? 50 8B ? E8
+00A78DB0: // Follow Call Below: 8B 87 ? ? ? ? 8B 80 ? ? ? ? 50 8B ? E8
 push -01
-push 01A4FD30
+push 01A4FD90
 
 dealloc(CUIAvatar__SelectCharacter_Hook)
 dealloc(StringPIC)
