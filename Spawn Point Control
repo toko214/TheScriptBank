@@ -14,7 +14,7 @@ jmp 017D9480
 dd SPControl
 
 [Disable]
-017D9480: //Same as above
-dd 01E96BC0//Address in Return
+01E96BC0: //Same as above
+dd 017D9480//Address in Return
 DeAlloc(SPControl)
 
