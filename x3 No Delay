@@ -1,4 +1,4 @@
-//171.3
+//173.1
 //Updated by CT - Useless IMO.
 [ENABLE]
 alloc(DelayHook,128)
@@ -21,7 +21,7 @@ ret 0014
 DH_Reset:
 mov [Counter],0
 push -01 // Original Opcode
-push 01BA2748// Original Opcode
+push 01BB9E48// Original Opcode
 jmp Return
 
 AttackHook:
@@ -38,29 +38,29 @@ ret 0004
 
 AH_Original:
 push -01 // Original Opcode
-push 01BB4D08 // Original Opcode
+push 01BCC408// Original Opcode
 jmp Return2
 
-016067F0:
+016191D0:
 jmp DelayHook
 nop
 nop
 Return:
 
-01715940:
+01728490:
 jmp AttackHook
 nop
 nop
 Return2:
 
 [DISABLE]
-016067F0: // 6A FF 68 ?? ?? ?? ?? 64 A1 00 00 00 00 50 83 EC ?? 53 55 56 57 A1 ?? ?? ?? ?? 33 C4 50 8D 44 24 ?? 64 A3 00 00 00 00 8B D9 83 BB ?? ?? ?? ?? 00 8B 7C 24 ?? 0F 84
+016191D0: // 6A FF 68 ?? ?? ?? ?? 64 A1 00 00 00 00 50 83 EC ?? 53 55 56 57 A1 ?? ?? ?? ?? 33 C4 50 8D 44 24 ?? 64 A3 00 00 00 00 8B D9 83 BB ?? ?? ?? ?? 00 8B 7C 24 ?? 0F 84
 push -01
-push 01BA2748
+push 01BB9E48
 
-01715940: // 6A FF 68 ? ? ? ? 64 A1 00 00 00 00 50 83 ? ? 53 55 56 57 A1 ? ? ? ? 33 C4 50 8D ? ? ? 64 A3 00 00 00 00 8B F1 8B ? ? ? ? ? 6A 00 68 ? ? ? ? 8B ? 89  [Third Result]
+01728490: // 6A FF 68 ? ? ? ? 64 A1 00 00 00 00 50 83 ? ? 53 55 56 57 A1 ? ? ? ? 33 C4 50 8D ? ? ? 64 A3 00 00 00 00 8B F1 8B ? ? ? ? ? 6A 00 68 ? ? ? ? 8B ? 89  [Third Result]
 push -01
-push 01BB4D08
+push 01BCC408
 
 dealloc(DelayHook)
 dealloc(Counter)

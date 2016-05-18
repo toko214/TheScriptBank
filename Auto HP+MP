@@ -1,6 +1,5 @@
-//171.3
+//173.1
 //AutoPot by ClanTag
-//Credits - ShivvTek for updating PressKey + whoever created PressKey.
 [ENABLE]
 Alloc(GiveHealth,256)
 Label(HealthEnd)
@@ -31,18 +30,18 @@ mov [esi+00002AB4],edi
 mov [HealthVar],edi
 test edi,edi
 je HealthEnd
-mov ecx,[020C5608]
+mov ecx,[021189C8]
 test ecx,ecx
 je HealthEnd
 mov [ecx+58],#20
 cmp [HealthVar],#5500 //Change Health Potting Value
-jge HealthEnd
+jle HealthEnd
 mov edx, PAGEUP //Change Health Key
 call PressKey
 
 HealthEnd:
 popad
-jmp 01434ED3
+jmp 01463893
 
 
 GiveMana:
@@ -51,42 +50,42 @@ mov [esi+00002AB8],edi
 mov [ManaVar],edi
 test edi,edi
 je ManaEnd
-mov eax,[020C5608]
+mov eax,[021189C8]
 test eax,eax
 je ManaEnd
 mov [eax+5c],#20
 cmp [ManaVar],#1500 //Change Mana Potting Value
-jge ManaEnd
+jle ManaEnd
 mov edx, PAGEDOWN //Change Mana Key
 call PressKey
 
 ManaEnd:
 popad
-jmp 01434F3A
+jmp 014638FA
 
 
 PressKey:
-mov esi,[004B4320] //A1 ? ? ? ? 8B ? ? ? ? ? 85 ? 74 ? 8B ? ? 51 83 ? ? 50 E8 ? ? ? ? 98 83 ? ? 3D ? ? ? ? 74 ? 3D ? ? ? ? 74 [in MOV]
+mov esi,[021141F4] //A1 ? ? ? ? 8B ? ? ? ? ? 85 ? 74 ? 8B ? ? 51 83 ? ? 50 E8 ? ? ? ? 98 83 ? ? 3D ? ? ? ? 74 ? 3D ? ? ? ? 74 [in MOV]
 mov ecx,[esi+A4]
 push edx
 push 00
-call 017F3640 //A1 ?? ?? ?? ?? 85 C0 74 ?? 8D 48 ?? 8B 01 8B 00
+call 0182B0B0 //A1 ?? ?? ?? ?? 85 C0 74 ?? 8D 48 ?? 8B 01 8B 00
 ret
 
-01434EAF:
+0146386F:
 jmp GiveHealth
 nop
 
-01434F16:
+014638D6:
 jmp GiveMana
 nop
 
 [DISABLE]
 
-01434EAF:
+0146386F:
 mov [esi+00002AB4],edi
 
-01434F16:
+014638D6:
 mov [esi+00002AB8],edi
 
 DeAlloc(GiveHealth)

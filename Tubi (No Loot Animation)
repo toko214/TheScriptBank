@@ -1,4 +1,4 @@
-//172.2 
+//173.1
 //Updated by CT
 [ENABLE]
 alloc(Tubi,64)
@@ -9,19 +9,19 @@ mov eax, 0
 push esi
 jmp Ret
 
-018585C0:
+0186B290:
 jmp Tubi
 Ret:
 
-0050E376: // Remove loot animation
+0050EE86: // Remove loot animation
 db 81 FE 00 00 00 00
 
 [DISABLE]
-018585C0: // FUNCTION START (mov eax,[esp+04]): 8D 8E ? ? 00 00 E8 ? ? ? ? E8 ? ? ? ? 50
+0186B290: // FUNCTION START (mov eax,[esp+04]): 8D 8E ? ? 00 00 E8 ? ? ? ? E8 ? ? ? ? 50
 mov eax,[esp+04]
 push esi
 
-0050E376: // 81 ? ? ? 00 00 0F 8D ? ? 00 00 85 ? 0F 84 [1st Result]
+0050EE86: // 81 ? ? ? 00 00 0F 8D ? ? 00 00 85 ? 0F 84 [1st Result]
 db 81 FE BC 02 00 00
 
 dealloc(Tubi)
