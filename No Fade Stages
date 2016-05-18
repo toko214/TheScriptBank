@@ -1,15 +1,15 @@
-//172.2 
+//173.1
 //Updated by CT
 [ENABLE]
-00DE1250: // CStage::FadeOut
+00DE8610: // CStage::FadeOut
 ret 0004
 
-00DE0C90: // CStage::FadeIn
+00DE8050: // CStage::FadeIn
 ret 0004
 
 [DISABLE]
-00DE1250: // 33 C9 6A 00 E8 ? ? ? ? 8B 35 [Call]
+00DE8610: // 33 C9 6A 00 E8 ? ? ? ? 8B 35 [Call]
 db 6A FF 68
 
-00DE0C90: // 33 C9 6A 00 E8 ? ? ? ? 8B 44 [Call]
+00DE8050: // 33 C9 6A 00 E8 ? ? ? ? 8B 44 [Call]
 db 6A FF 68

@@ -1,22 +1,20 @@
-//172.2
-//Su was here
-//ClanTag was also here, cleaning shit up bcz dbLmao.
+//173.1
 [ENABLE]
 alloc(find_hit_mob_in_rect_hook,128)
 
 find_hit_mob_in_rect_hook:
-mov eax,[020FC888] // CWvsPhysicalSpace2D: A1 ? ? ? ? 8B 50 ? 83 C0
-lea eax,[eax+0C] // Left Wall Offset
+mov eax,[0211409C] // CWvsPhysicalSpace2D: A1 ? ? ? ? 8B 50 ? 83 C0
+lea eax,[eax+3C] // Left Wall Offset
 mov [esp+04],eax
-jmp 00B9C300 // Original call (CMobPool::FindHitMobInRect)
+jmp 00BA2670 // Original call (CMobPool::FindHitMobInRect)
 
 
-00916829:
+009180F9:
 call find_hit_mob_in_rect_hook
 
 [DISABLE]
 
-00916829: // E8 ? ? ? ? 8B ? 89 ? ? ? 85 ? 0F 8E [First Result]
-call 00B9C300
+009180F9: // E8 ? ? ? ? 8B ? 89 ? ? ? 85 ? 0F 8E [First Result]
+call 00BA2670
 
 dealloc(find_hit_mob_in_rect_hook)

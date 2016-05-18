@@ -1,10 +1,10 @@
 //172.2 
 //Updated by CT
 [ENABLE]
-01640DC0:
+01653750:
 db EB
 
 
 [DISABLE]
-01640DC0: // 8B 01 8B 54 24 ? 56 8B 74 24 ? 2B C6 [JNGE below]
+01653750: // 8B 01 8B 54 24 ? 56 8B 74 24 ? 2B C6 [JNGE below]
 db 7E

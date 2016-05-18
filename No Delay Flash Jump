@@ -1,21 +1,21 @@
-//172.2 
+//173.1
 //Updated by CT
 [ENABLE]
-016467D1:
+01659161:
 db 90 90
 
-01691EE2:
+016A4882:
 db 90 90
 
-01723687:
+01736187:
 db BF 00
 
 [DISABLE]
-016467D1: // 7D ? 33 FF 68
+01659161: // 7D ? 33 FF 68
 db 7D 02
 
-01691EE2: // 7D ? 33 F6 81 [Third Result]
+016A4882: // 7D ? 33 F6 81 [Third Result]
 db 7D 02
 
-01723687: // BF 01 00 00 00 01 BE [Second Result]
+01736187: // BF 01 00 00 00 01 BE [Second Result]
 db BF 01
