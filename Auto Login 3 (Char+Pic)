@@ -1,11 +1,11 @@
-//172.2
-//Updated By Leo
+//v173.1
+//Updated by CT
 [ENABLE]
 alloc(CUIAvatar__SelectCharacter_Hook,1024)
 alloc(StringPIC,40)
 
 StringPIC:
-db 'ENTERPICHERE' 00
+db 'pinhere' 00
 
 CUIAvatar__SelectCharacter_Hook:
 push ebp
@@ -13,7 +13,9 @@ mov ebp,esp
 sub esp,04
 
 push esi
-mov esi,[0210A088] // CLogin__GetInstance: 8B 3D ? ? ? ? 33 DB 89 7C 24 18 3B FB 0F 84 ? ? ? ? 8B
+mov esi,[021260F8] // CLogin__GetInstance: 8B 3D ? ? ? ? 33 DB 89 7C 24 18 3B FB 0F 84 ? ? ? ? 8B
+push 2500
+call Sleep
 mov eax, #0 // Character Slot -1 (first char = 0, second char = 1, etc)
 // Assembly Scan: mov eax,[eax+000004B0]
 mov [esi+00000478],eax // 8B 87 ? ? ? ? 8B 80 ? ? ? ? 50 8B ? E8 [Offset Below
@@ -33,14 +35,14 @@ mov esp,ebp
 pop ebp
 ret 0004
 
-00A78DB0:
+00A7E2C0:
 jmp CUIAvatar__SelectCharacter_Hook
 db 90 90
 
 [DISABLE]
-00A78DB0: // Follow Call Below: 8B 87 ? ? ? ? 8B 80 ? ? ? ? 50 8B ? E8
+00A7E2C0: // Follow Call Below: 8B 87 ? ? ? ? 8B 80 ? ? ? ? 50 8B ? E8
 push -01
-push 01A4FD90
+push 01A65B40
 
 dealloc(CUIAvatar__SelectCharacter_Hook)
 dealloc(StringPIC)
