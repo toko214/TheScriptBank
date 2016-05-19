@@ -1,5 +1,5 @@
 //v173.1
-//By CT with help from FameGuy.
+//By FameGuy/CT
 Define(SpawnX,#100)
 Define(SpawnY,#-100)
 [ENABLE]
