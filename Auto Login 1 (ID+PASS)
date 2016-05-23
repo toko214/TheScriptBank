@@ -8,10 +8,10 @@ alloc(StringUser,64)
 alloc(StringPW,64)
 
 StringUser:
-db 'saecoume@ninja-mail.com' 00
+db 'yourNameHere' 00
 
 StringPW:
-db '01010101' 00
+db 'yourPassHere' 00
 
 1stLogin_callback2:
 sub esp,08
