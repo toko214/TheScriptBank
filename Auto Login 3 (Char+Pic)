@@ -5,7 +5,7 @@ alloc(CUIAvatar__SelectCharacter_Hook,1024)
 alloc(StringPIC,40)
 
 StringPIC:
-db 'pinhere' 00
+db 'picHere' 00
 
 CUIAvatar__SelectCharacter_Hook:
 push ebp
@@ -14,8 +14,6 @@ sub esp,04
 
 push esi
 mov esi,[021260F8] // CLogin__GetInstance: 8B 3D ? ? ? ? 33 DB 89 7C 24 18 3B FB 0F 84 ? ? ? ? 8B
-push 2500
-call Sleep
 mov eax, #0 // Character Slot -1 (first char = 0, second char = 1, etc)
 // Assembly Scan: mov eax,[eax+000004B0]
 mov [esi+00000478],eax // 8B 87 ? ? ? ? 8B 80 ? ? ? ? 50 8B ? E8 [Offset Below
@@ -28,6 +26,10 @@ push eax
 lea ecx,[esi+000005CC] // 8D 8E ? ? 00 00 E8 ? ? ? ? C7 86 ? ? 00 00 00 00 00 00 C6
 call 00479E70 // ZXString_unsigned_char___operator_: 8B 44 24 04 56 8B F1 3B F0 74 [First Result]
 lea ecx,[ebp-04]
+push eax
+push 1500
+call Sleep
+pop eax
 call 00479B30 // ZXString_char____ZXString_char_: 56 8B F1 8B 06 85 C0 74 [Third Result]
 pop esi
 
