@@ -1,5 +1,5 @@
 //173.1
-//Updated by CT
+//Updated by CT, fixed by Noire
 [ENABLE]
 alloc(1stLogin,1024)
 label(1stLogin_callback)
@@ -8,10 +8,10 @@ alloc(StringUser,64)
 alloc(StringPW,64)
 
 StringUser:
-db 'enterUSERNAMEhere' 00
+db 'saecoume@ninja-mail.com' 00
 
 StringPW:
-db 'enterPASSWORDhere' 00
+db '01010101' 00
 
 1stLogin_callback2:
 sub esp,08
@@ -49,7 +49,7 @@ ret
 
 1stLogin:
 mov [esp],1stLogin_callback
-jmp 00AB7AD0 // Original Call
+jmp 00ABCFE0 // Original Call
 
 1stLogin_callback:
 call 1stLogin_callback2
