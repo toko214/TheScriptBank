@@ -16,7 +16,7 @@ Post in: http://www.gamekiller.net/threads/ce-scripts-the-script-bank.3241020/
 ------
 
 ### Current Version
-- **172.2**
+- **173.1**
 
 ### Current Updated Scripts
 - A Whole Bunch!
