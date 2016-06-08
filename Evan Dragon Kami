@@ -1,5 +1,5 @@
-//171.3
-//Updated By toko214 With Help From Qybah
+//173.1
+//Updated By Randomcity2
 [ENABLE]
 alloc(EvanDragonKami,128)
 label(DragonTeleport)
@@ -20,14 +20,14 @@ sub edx, #0 // Dragon Kami Range Y
 mov eax,[eax]
 add eax, #-40// Dragon Kami Range X
 add esp,0C
-jmp 017BDAA0 // 8B 00 8B 4E ? 52 mov ecx,[esi+10] below [2nd result]
+jmp 017F54F0 // 8B 00 8B 4E ? 52 mov ecx,[esi+10] below [2nd result]
 
 DragonTeleport:
 push ebp
 mov ebp,esp
 push ecx
 push esi
-mov eax,[020C54FC] // Mob Base: 8B 0D ? ? ? ? ? E8 ? ? ? ? 8B ? 85 ? 74 ? 8B ? ? 8B ? ? 8D
+mov eax,[021188BC] // Mob Base: 8B 0D ? ? ? ? ? E8 ? ? ? ? 8B ? 85 ? 74 ? 8B ? ? 8B ? ? 8D
 test eax,eax
 je ReturnXor
 mov eax,[eax+28]
@@ -38,7 +38,7 @@ mov [ebp-04],eax
 NextTeleport:
 lea eax,[ebp-04]
 push eax
-call 00478C50 // E8 ? ? ? ? 8B ? ? 8B ? ? 8B ? ? 8B ? ? 8B ? ? 8B [Follow Call]
+call 0047C2B0 // E8 ? ? ? ? 8B ? ? 8B ? ? 8B ? ? 8B ? ? 8B ? ? 8B [Follow Call]
 add esp,04
 mov esi,[eax+04]
 // Assembly Scan: mov [esi+00000804],eax
@@ -67,15 +67,15 @@ pop ebp
 ret 0004
 
 Ending:
-call dword ptr [020D991C] // Original Opcode
-jmp 017BDA73 // test eax,eax below
+call dword ptr [0212D5CC] // Original Opcode
+jmp 017F54C3 // test eax,eax below
 
-017BDA6D:
+017F54BD:
 jmp EvanDragonKami
 db 90
 
 [DISABLE]
-017BDA6D: // FF 15 ? ? ? ? 85 C0 75 ? 8B ? 8B ? ? 8D [First Result]
-call dword ptr [020D991C]
+017F54BD: // FF 15 ? ? ? ? 85 C0 75 ? 8B ? 8B ? ? 8D [First Result]
+call dword ptr [0212D5CC]
 
 dealloc(EvanDragonKami)
