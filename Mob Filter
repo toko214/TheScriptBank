@@ -1,6 +1,5 @@
-//v173.1
-//Updated by Qybae
-
+//173.1
+//Updated by Randomcity2
 [Enable]
 alloc(MobFilter1,256)
 Label(Filter1)
@@ -11,26 +10,40 @@ Label(FilterMobs2)
 Label(Filter2)
 Label(Exit2)
 alloc(MobList,2048)
- 
+
 MobList:
 dd #9390620 //Corrupted Veilstone AKA the mob that spawns when fighting Gollux's head
 dd #9390621 //Corrupted Veilstone
 dd #9390622 //Corrupted Veilstone
 dd #9390623 //Corrupted Veilstone
-dd #1210102 //Orange Mushroom
+dd #8950007 // Self-destructive Chaos - Lotus boss fight bots
+dd #8950005 // Self-destructive Yellow
+dd #8950004 // Self-destructive Blue
+dd #8950003 // Self-destructive Red
+dd #8240121 // Self-destructive Chaos
+dd #8240102 // Self-destructive Yellow
+dd #8240101 // Self-destructive Blue
+dd #8240100 // Self-destructive Red - Lotus boss fight bots
+dd #9309300 // Finley - Tower of Oz
+dd #9309130 // Infuriated Fairy - Tower of Oz
+//dd #9309109 // Black Flower Golem - Tower of Oz
+//dd #9309103 // Black Flower Golem
+dd #9309086 // Trap - Tower of Oz
+dd #9309036
 dd #100004
 dd #9100011
 dd #9300229
 dd #9500102
- 
-00ba726b: //E8 ? ? ? ? 89 ? 24 ? 85 ? 0F 85 ? ? ? ? 50
+dd 00
+
+00BA726B: //E8 ? ? ? ? 89 ? 24 ? 85 ? 0F 85 ? ? ? ? 50
 jmp MobFilter1
- 
+
 MobFilter1:
-call 0041b1d0 //original op
+call 0041B1D0 //original op
 push ebx
 mov ebx,MobList
- 
+
 FilterMobs1:
 cmp eax,[ebx]
 je Filter1
@@ -38,22 +51,22 @@ cmp [ebx],00
 je Exit1
 add ebx,4
 jmp FilterMobs1
- 
+
 Filter1:
 pop ebx
-jmp 00ba741e //mov ecx,[esp+24] | address RIGHT BELOW last CALL in function
- 
+jmp 00BA741E //mov ecx,[esp+24] | address RIGHT BELOW last CALL in function
+
 Exit1:
 pop ebx
-jmp 00ba7270 //mov[esp+18),eax | RIGHT BELOW MobFilter1
- 
-00ba74aa: //E8 ? ? ? ? 8B ? 85 ? 74 ? 8D ? ? ? 00 00 B9 [2nd Result]
+jmp 00BA7270 //mov[esp+18),eax | RIGHT BELOW MobFilter1 00B92A70
+
+00BA74AA: //E8 ? ? ? ? 8B ? 85 ? 74 ? 8D ? ? ? 00 00 B9 [2nd Result]
 jmp MobFilter2
- 
+
 MobFilter2:
 push ebx
 mov ebx,MobList
- 
+
 FilterMobs2:
 cmp eax,[ebx]
 je Filter2
@@ -61,26 +74,25 @@ cmp [ebx],00
 je Exit2
 add ebx,4
 jmp FilterMobs2
- 
+
 Filter2:
 pop ebx
-call 004ccc50 //original op
+call 004CCC50 //original op
 mov esi,eax //original op
-jmp 00ba7786 //address below last CALL in function
- 
+jmp 00BA7786 //address below last CALL in function
+
 Exit2:
 pop ebx
-call 004ccc50 //original op
-jmp 00ba74af //Below MobFilter2 address
- 
- 
+call 004CCC50 //original op
+jmp 00BA74AF //Below MobFilter2 address
+
+
 [Disable]
-00ba726b:
-call 0041b1d0
- 
-00ba74aa:
-call 004ccc50
- 
+00BA726B:
+call 0041B1D0
+
+00BA74AA:
+call 004CCC50
+
 Dealloc(MobFilter1)
 Dealloc(MobFilter2)
-Dealloc(MobList
