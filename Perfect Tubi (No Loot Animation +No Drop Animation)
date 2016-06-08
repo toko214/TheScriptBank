@@ -1,17 +1,17 @@
-//171.3
-// Updated By toko214
+//173.1
+// Updated By Randomcity2
 // Called address (First mov below called address)
 // E8 ? ? ? ? 8B 86 ? ? ? ? C6 44 24 ? 05 85 C0 74 ? 83 C0 04
-Define(Tubi, 008722DA)
+Define(Tubi, 0087E8EA)
 
 
 // calculate_parbolic_motion_duration
 // DC 0D ? ? ? ? 83 C4 ? E9 ? ? ? ? DD 05
-Define(InstantDrop, 00730974)
+Define(InstantDrop, 0073AEE4)
 
 
 // 2B 70 ? 81 FE ? ? ? 00 0F 8D ? ? ? 00 85 ED 0F 84
-Define(NoAnimation, 0050ABD3)
+Define(NoAnimation, 0050EE83)
 
 
 [Enable]
@@ -29,11 +29,11 @@ dd 0
 
 [Disable]
 Tubi:
-mov [esi+00001CE8],eax
+mov eax,[esi+00001CE8]
 
 
 InstantDrop:
-fmul qword ptr [01D1C4B8]
+fmul qword ptr [01D6CD60]
 
 
 NoAnimation+5:
