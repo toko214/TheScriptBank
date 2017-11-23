@@ -1,0 +1,41 @@
+//v173.1
+//Creditz to Andrew Solesa
+define(send_packet,024AE102)
+[enable]
+alloc(thread_spoof,128)
+alloc(thread_environment,4)
+
+label(spoof)
+label(default)
+label(return)
+
+thread_environment:
+dd 00000000
+
+thread_spoof:
+pushfd
+cmp [thread_environment],00
+push eax
+jne spoof
+mov eax,fs:[18]
+mov [thread_environment],eax
+
+spoof:
+mov eax,fs:[18]
+cmp [thread_environment],eax
+je default
+mov eax,[thread_environment]
+mov fs:[18],eax
+
+default:
+pop eax
+popfd
+jl 024AE118
+jmp return
+
+send_packet:
+jmp thread_spoof
+nop
+return:
+
+[disable]

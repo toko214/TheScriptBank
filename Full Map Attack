@@ -1,0 +1,13 @@
+//v173.1
+//General FMA Super Freaking Simplified - Courtesy of ClanTag
+
+[ENABLE]
+
+00BA2AA0: //FullMapAttack
+db 74 18
+ 
+ 
+[DISABLE]
+//75 18 81 BC 24 ?? ?? 00 00 ?? ?? ?? ?? 0F 85 ?? ?? ?? ?? 83 7C ?? ?? 01 75 7F 8B BE ?? ?? 00 00 85 FF 0F 84
+00BA2AA0: //FullMapAttack
+db 75 18

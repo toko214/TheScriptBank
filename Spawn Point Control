@@ -1,0 +1,29 @@
+//v173.1
+//By FameGuy/CT
+Define(SpawnX,#100)
+Define(SpawnY,#-100)
+[ENABLE]
+Alloc(Hook,128)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+Hook:
+mov edi,SpawnX
+mov ebx,SpawnY
+originalcode:
+call 017E9370
+
+exit:
+jmp returnhere
+
+01714B4C:
+jmp Hook
+returnhere:
+
+[DISABLE]
+
+01714B4C:
+call 017E9370
+
+DeAlloc(Hook)

@@ -1,0 +1,31 @@
+//173.1
+//Updated by Randomcity2
+[ENABLE]
+0073D7C7: // Somewhere down CDropPool::TryPickUpDrop
+cmp [esi+48],0 // Follow jne 0073328F -> mov ecx,[esi+48]
+jz 0073D85B// lea ecx,[esp+20]
+push ecx
+mov ecx,[esp+4C] // Follow jne 0073328F -> mov eax,[esp+4C]
+mov [ecx],ebp
+mov [ecx+4],eax
+pop ecx
+jmp 0073D846 // Address in jne
+dw 9090
+
+01922850: // CWvsContext::SendBoobyTrapAlert
+ret 0004
+
+[DISABLE]
+0073D7C7: // 85 C0 75 ? 8D ? 24 ? C7 ? 24 ? ? ? ? ? E8 ? ? ? ? 8B
+push eax
+push ebp
+lea eax,[esp+30]
+push eax
+call dword ptr [0212D5CC]
+test eax,eax
+jne 0073D82F
+lea ecx,[esp+20]
+mov [esp+40],FFFFFFFF
+
+01922850: // push FF/-01 below: E9 ? ? ? ? CC CC CC CC CC 6A FF 68 ? ? ? ? 64 A1 ? ? ? ? 50 83 ? ? A1 [Third result]
+db 6A FF 68

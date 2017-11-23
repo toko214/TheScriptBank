@@ -1,0 +1,18 @@
+//173.1
+//Updated by CT
+[Enable]
+016EBEE9: //85 F6 75 ? 39 ? 24 ? ? ? ? 74
+xor esi,esi
+nop
+nop
+
+016EBEF4: //address of JE below
+db EB
+
+[Disable]
+016EBEE9:
+db 85 F6 75 09
+
+016EBEF4:
+db 74
+
